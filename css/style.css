@@ -4,22 +4,19 @@
 
 
 .descuento {
-    position: absolute;
+    display: flex;
     background-color: #1CD1B0;
     color: black;
-    width: 1024px;
+    width: auto;
     height: 38px;
-    left: 0px;
-    top: 0;
-    margin: 0%;
 }
 
 
 header {
-    position: absolute;
+    display: flex;
     color: black;
-    width: 1024px;
     height: 101px;
+    width: auto;
     left: 0px;
     top: 38px;
     background: #00669F;
@@ -85,15 +82,13 @@ p {
     bottom: 170px;
 }
 .container {
-    position: relative;
-    width: 100%;
-    height: 580px;
+    display: flex;
+    justify-content: space-around;
     top:150px;
-    margin: 10px 20px;
 }
 
 .card {
-    position: relative;
+    
     border-top-left-radius: 8%;
     border-top-right-radius: 8%;
     background-color: #F3F3F3;
@@ -142,11 +137,15 @@ button {
 }
 
 footer {
-    position:absolute;
-    left: 0%;
-    bottom: 0%;
+    display: flex;
     color: white;
-    width: 1024px;;
     height: 51px;
     background: #00669F;
+}
+
+@media (max-width: 600px) { 
+    .container {
+        flex-direction: column;        
+        align-items: center;
+    }
 }
